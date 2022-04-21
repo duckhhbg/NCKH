@@ -46,7 +46,7 @@ a {
 }
 
 #header .search:hover {
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); */
     border-radius: 60px;
     width: 100%;
     max-width: 520px;
@@ -90,8 +90,8 @@ a {
 .search-btn button {
     border: 0;
     border-radius: 50%;
-    width: 30px;
-    height: 30px;
+    width: 28px;
+    height: 28px;
     background-color: #e6d6d6;
     cursor: pointer;
 }
@@ -105,7 +105,7 @@ a {
 }
 
 .search-btn button i {
-    width: 12px;
+    width: 16px;
 }
 
 ::placeholder {
@@ -116,7 +116,7 @@ a {
 
 #slider {
     display: flex;
-    min-height: 100vh;
+    /* min-height: 100vh; */
     padding-top: 66px;
 }
 
@@ -125,6 +125,7 @@ a {
     display: flex;
     background-color: #fff;
     flex-direction: column;
+    border-bottom-right-radius: 12px;
 }
 
 .menu .list {
@@ -135,7 +136,7 @@ a {
     position: relative;
 }
 
-.menu .list li a{
+.menu>.list>li>a{
     border: 0;
     width: 70px;
     height: 70px;
@@ -149,7 +150,7 @@ a {
 
 }
 
-.menu .list li:hover a {
+.menu>.list>li:hover>a {
     background-color: #e6d6d6;
 }
 
@@ -160,7 +161,25 @@ a {
     text-align: center;
 }
 
-.menu .list .sub-learning{
+.menu .list .sub-teaching{
+    position: absolute;
+    display: none;
+}
+
+.menu .list li:hover .sub-teaching {
+    background-color: #e6d6d6;
+    display: block;
+    left: 78px;
+    list-style-type: none;
+    top: -1px;
+    width: 800%;
+    border-radius: 16px;
+    padding-top: 28px;
+    padding-bottom: 114px;
+    margin-left: .5px;
+}
+
+.menu .list .sub-learning {
     position: absolute;
     display: none;
 }
@@ -170,23 +189,31 @@ a {
     display: block;
     left: 78px;
     list-style-type: none;
-    top: -141px;
+    top: -153px;
     width: 800%;
     border-radius: 16px;
-    padding-top: 16px;
+    padding-top: 28px;
     padding-bottom: 114px;
     margin-left: .5px;
 }
 
-.sub-learning li {
-    padding: 12px;
+.sub-learning li ,
+.sub-teaching li {
+    /* padding: 12px; */
     font-weight: 600;
 }
 
-.sub-learning li:hover {
+.sub-learning li a ,
+.sub-teaching li a {
+    padding: 12px;
+    display: block;
+}
+
+.sub-learning li:hover ,
+.sub-teaching li:hover {
     background-color: #e8ebed;
+    display: block;
     border-radius: 16px;
-    
 }
 
 .slideshow {
@@ -290,13 +317,47 @@ a {
     background: #40d3dc;
 }
 
-
-
 #content {
+    margin:20px 0 20px 88px;
+}
 
+.teach h2,
+.learn h2 {
+    margin-bottom: 20px;
+}
+
+#LH,#TL,#BT,#VD,
+#KTMT,#DTVT,#KTDK,#KTDT {
+    margin: 10px;
+}
+
+.list-item {
+    display: flex;
+    max-height: 160px;
+    overflow-x: auto;
+    border: 1px solid #40d3dc;
+    border-radius: 12px;
+}
+
+/* .list-item::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+} */
+
+a.item {
+    background-color: #40d3dc;
+    min-width: 216px;
+    height: 120px;
+    border-radius: 12px;
+    line-height: 120px;
+    text-align: center;
+    margin: 10px;
 }
 
 #footer {
-
+    width: 100%;
+    color: #e6d6d6;
+    height: 280px;
+    background-color: #2d3131;
 }
 
